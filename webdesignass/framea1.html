@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>framea1</title>
+<style>
+body
+{ background-image:url('images90.jpg');
+  background-repeat:no-repeat;
+  background-size:1500px 600px;
+  background-position:right;
+ 
+}
+
+
+input ,select,textarea,
+{
+width:25%;
+}
+</style>
+
+<script type="text/javascript">
+    function validate()
+{
+ var ddl = document.getElementById("serid");
+ var selectedValue = ddl.options[ddl.selectedIndex].value;
+    if (selectedValue == "facial")
+   {
+    document.getElementById("empid").value = "2000";
+    alert("Amount differs depending on the facial type")
+}
+if (selectedValue == "manicure")
+   {
+    document.getElementById("empid").value = "1500";
+   }
+if (selectedValue == "pedicure")
+   {
+    document.getElementById("empid").value = "2500";
+   }
+if (selectedValue == "waxing")
+   {
+    document.getElementById("empid").value = "3000";
+   }
+if (selectedValue == "threading")
+   {
+    document.getElementById("empid").value = "1000";
+   }
+if (selectedValue == "SELECT SERVICE")
+   {
+    document.getElementById("empid").value = " ";
+   }
+    }
+
+
+
+  function fun()
+{
+ alert("welcome")
+}
+
+function f21()
+{
+      var isValid = true;
+        if(isValid==true)
+      {
+        alert("YLG will contact you soon!!!");
+        window.location = 'http://www.ylgathome.com/?utm_source=ylgindia&utm_medium=Header%20link&utm_campaign=YLG@Home';
+      }
+return false;
+}
+
+
+function d1(){
+    var dtToday = new Date();
+    
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+    
+    var maxDate = year + '-' + month + '-' + day;
+    
+   ('#txtDate').attr('min', maxDate);
+}
+</script>
+
+</head>
+<body><h1><pre>                                      
+                OUR SALON MADE ONE OF OUR SUBGROUP  YLG 
+                      FOR DELIVERING HOME SERVICES
+</pre></h1>
+<form  align="center" target="blank"  onsubmit="return f21(); "  ><br><br>
+
+<input type="text"  name="name" placeholder="NAME" pattern="[a-zA-Z]*" title="Please enter on alphabets only" required><br><br>
+ 
+<select value="select city"  required>
+<option value=" " selected disabled hidden >SELECT CITY</option>
+<option>chennai</option>
+<option>bangalore</option>
+<option>hyderabad</option>
+<option>kochi</option>
+
+</select><br><br>
+<textarea rows="5" cols="35" name="address"  placeholder="ADDRESS" required>
+</textarea> 
+<br><br>
+<select name="sername" id="serid"  onclick="validate()" class="g" required>
+<option>SELECT SERVICE</option>
+<option>manicure</option>
+<option>pedicure</option>
+<option value="facial"  >facial</option>
+<option>waxing</option>
+<option>threading</option>
+</select><br><br>
+AMOUNT
+<input type="text" name="emp_id" id="empid"  class="g" readonly ><br><br>
+
+
+<select  name="slotname" required >
+<option>SELECT SLOT</option>
+<option>9:00 </option>
+<option>12:00</option>
+<option>16:00</option>
+<option>18:00</option>
+<option>20:00</option>
+</select><br><br>
+<input type="text" name="contact"  maxlength="10" placeholder="PHONE NO" pattern="[0-9]{10}" title="Please Enter 10 Digits Number"  required><br><br>
+SERVICE DATE<br><br>
+<input type="date"  id="#txtDate"  onclick="d1();" required><br><br>
+
+<input type="submit" name="BOOK IT" value="BOOK IT" >
+
+</form>
+</body>
+</html>

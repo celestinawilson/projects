@@ -1,0 +1,35 @@
+body
+{        background-image:url('images89.jpg');
+         background-position:right;
+         background-size:700px 550px;
+         background-repeat:no-repeat;
+         background-color:white;
+         backgroud-attachment:fixed;
+}
+#h1
+{       text-align:justify;
+        font-size:30px;
+        margin-left:240px;
+        margin-top:10px;
+        
+}
+#h2
+{       text-align:justify;
+        font-size:25px;
+        margin-left:200px;
+        color:purple;
+        
+}
+#h3
+{        text-align:justify;
+         margin-left:15px;
+         font-size:16px;
+        color:mediumseagreen;
+        
+}
+#h5
+{       text-align:justify;
+         margin-left:15px;
+         font-size:16px;
+         color:slateblue; 
+}

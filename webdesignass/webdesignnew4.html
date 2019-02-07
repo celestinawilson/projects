@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>webdesignnew4</title>
+<style>
+body
+{ background-image:url('images103.jpg');
+  background-repeat:no-repeat;
+  background-size:1400px 700px;
+  background-position:left;
+
+}
+a
+{
+  text-decoration:none;
+}
+div
+{   font-size:30px;
+}
+#serid
+{width:10%;
+}
+#empid
+{width:10%;
+}
+input ,select,textarea
+{
+width:25%;
+}
+.g
+{ width:10%;}
+</style>
+
+
+
+<script type="text/javascript">
+
+    function validate()
+{
+ var ddl = document.getElementById("serid");
+ var selectedValue = ddl.options[ddl.selectedIndex].value;
+    if (selectedValue == "facial")
+   {
+    document.getElementById("empid").value = "2000";
+    alert("Amount differs depending on the facial type")
+}
+if (selectedValue == "manicure")
+   {
+    document.getElementById("empid").value = "1500";
+   }
+if (selectedValue == "pedicure")
+   {
+    document.getElementById("empid").value = "2500";
+   }
+if (selectedValue == "waxing")
+   {
+    document.getElementById("empid").value = "3000";
+   }
+if (selectedValue == "threading")
+   {
+    document.getElementById("empid").value = "1000";
+   }
+if (selectedValue == "SELECT SERVICE")
+   {
+    document.getElementById("empid").value = " ";
+   }
+
+
+    }
+
+function f1()
+{
+var isValid = true;
+ if(isValid==true)
+{
+if(document.getElementById("rr1").checked==true) 
+{
+alert('50 % off on every services');
+var resources = document.getElementById('empid').value;
+var rst=parseInt(resources) *50/100;
+alert(' Appointment gets registered and the Approximate amount to be paid ' + rst);
+document.contact-form.reset();
+}
+else if(document.getElementById("rr2").checked==true) 
+{
+alert('10 % off on every services');
+var resources = document.getElementById('empid').value;
+var rst=parseInt(resources) *10/100;
+alert(' Appointment gets registered and the Approximate amount to be paid ' + rst);
+document.contact-form.reset();
+}
+}
+return false;
+}
+</script>
+
+</head>
+<body>
+<div style='background-color:white' align="center">
+<a href="webdesignnew1.html"><i>Home</i></a>
+<a href="webdesignnew2.html"><i>Services</i></a>
+<a href="webdesignnew3.html"><i>Bridal</i></a>
+<a href="webdesignnew4.html"><i>Appointment</i></a></div><br><br>
+<form  align="center"   onsubmit="return f1()">
+<input type="text"  name="name" placeholder="NAME" pattern="[a-zA-Z]*" title="Please enter on alphabets only" required><br><br>
+ <select value="select city"  required>
+<option value=" " selected disabled hidden >SELECT CITY</option>
+<option>chennai</option>
+<option>bangalore</option>
+<option>hyderabad</option>
+<option>kochi</option>
+
+</select><br><br>
+<textarea rows="5" cols="95" name="address"  placeholder="ADDRESS" required>
+</textarea> 
+<br><br>
+<select name="sername" id="serid"  onclick="validate()" class="g" required>
+<option>SELECT SERVICE</option>
+<option>manicure</option>
+<option>pedicure</option>
+<option value="facial"  >facial</option>
+<option>waxing</option>
+<option>threading</option>
+</select>
+AMOUNT
+<input type="text" name="emp_id" id="empid"  class="g" readonly /><br><br>
+
+
+<select name="slot" required >
+<option>SELECT SLOT</option>
+<option>9:00 </option>
+<option>12:00</option>
+<option>16:00</option>
+<option>18:00</option>
+<option>20:00</option>
+</select><br><br>
+  <input type="email" name="email" placeholder="EMAIL(confirmation mail will be sent here)" required><br><br>
+<input type="text" name="contact"  maxlength="10" placeholder="PHONE NO" pattern="[0-9]{10}" title="Please Enter 10 Digits Number"  required><br><br>
+APPOINTMENT DATE<br><br>
+<input type="date" name="appdate" id="theDate" onclick="newDate()"  required><br><br>
+ARE YOU A FIRST TIMER:<BR>YES<input type="radio" id="rr1" class="g" name="r1"   / >NO<input type="radio" id="rr2" name="r1" class="g" ><br>
+<br>
+
+<input type="submit" name="BOOK IT" value="BOOK IT"   ">
+</form>
+</body>
+</html>
